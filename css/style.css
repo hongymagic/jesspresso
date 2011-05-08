@@ -1,0 +1,123 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}/* remember to define visible focus styles! */:focus{outline:#ccc;}/* remember to highlight inserts somehow! */ins{text-decoration:none;}del{text-decoration:line-through;}table{border-collapse:collapse;border-spacing:0;}
+
+html, body { height: 100%; }
+
+/**
+ * Typography
+ */
+ 
+body { font-family: 'Sue Ellen Francisco', Arial, Serif; font-size: 150%; }
+
+h1, h2, h3 { font-weight: 700; margin: 5px 0 15px; }
+h1 { font-size: 3.0em; }
+h2 { font-size: 2.6em; }
+h3 { font-size: 2.3em; }
+
+a, a:hover, a:focus, a:active { text-decoration: none; }
+a, a:visited { color: #F778A1; }
+a:hover, a:active { color: #437C17; }
+
+ol li p { font-family: Helvetica, Arial, Sans-Serif; font-size: 75%; }
+ol li p em { font-family: 'Sue Ellen Francisco', Arial, Serif; font-size: 150%; }
+
+#command-window * { font-family: Helvetica, Arial, Sans-Serif; font-size: 6em; }
+
+code, pre, .code, .monospace { 
+  font-family: 'Anonymous Pro', monospace; 
+  margin: 15px 0;
+  padding: 2px;
+  line-height: 1.05em;
+  
+  font-size: 70%;
+}
+
+/**
+ * Common
+ */
+.hidden { display: none; visibility: hidden; }
+.centerbox {
+  /* flexbox, por favor */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+
+  display: box;
+  box-orient: horizontal;
+  box-pack: center;
+  box-align: center;
+}
+
+/**
+ * Command window
+ */
+#command-window { position: fixed; float: right; right: 0; }
+#command-window #command { padding: 0; margin: 0; line-height: 1; }
+
+/**
+ * Slides
+ */
+#main { min-height: 100%; height: 100%; min-width: 100%; width: 100%; }
+#main .slide { min-width: 600px; }
+
+#main .slide pre { background-color: #eee; }
+
+#main .slide ul,
+#main .slide ol { margin: 10px 0; padding: 0; }
+
+ol { list-style-type: decimal; }
+ol li { }
+ol li p { padding: 3px 10px 0 10px; border-left: 1px solid #999; }
+ol li p em { display: block; padding: 2px 0 10px; }
+	
+/**
+ * Navigation controls
+ */
+nav#controls { width: 100%; height: 100%; margin: 0; padding: 0; position: absolute; }
+nav#controls a { 
+  margin: 45% 0 0 0; 
+  font-size: 300%; 
+  position: absolute; 
+  cursor: pointer;
+  color: #eee; 
+
+  /* transition */
+  transition-property: color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+  -webkit-transition-property: color;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-timing-function: ease-out;
+  -o-transition-property: color;
+  -o-transition-duration: 1s;
+  -o-transition-timing-function: ease-out;
+  -moz-transition-property: color;
+  -moz-transition-duration: 1s;
+  -moz-transition-timing-function: ease-out;
+}
+nav#controls a:hover,
+nav#controls a:focus,
+nav#controls a:active { 
+  color: #000;
+
+  /* transition */
+  transition-property: color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+  -webkit-transition-property: color;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-timing-function: ease-out;
+  -o-transition-property: color;
+  -o-transition-duration: 1s;
+  -o-transition-timing-function: ease-out;
+  -moz-transition-property: color;
+  -moz-transition-duration: 1s;
+  -moz-transition-timing-function: ease-out;
+}
+nav#controls a.prev { left: 0; text-align: left; }
+nav#controls a.next { right: 0; text-align: right; }
